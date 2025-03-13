@@ -4,148 +4,233 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yatharth Kelkar - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="script.js" defer></script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-            color: white;
-            text-align: center;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #1e1e1e;
+            color: #f5f5f5;
             overflow-x: hidden;
         }
+
         header {
-            background: linear-gradient(90deg, #ff6f61, #ff4757, #ff9a00);
-            padding: 50px 20px;
-            font-size: 2em;
-            font-weight: bold;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            background: #333;
+            padding: 80px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
+
+        header h1 {
+            font-size: 3.5em;
+            color: #f1c40f;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
         nav {
             display: flex;
             justify-content: center;
-            background: #1a1a1a;
+            background: #444;
             padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
+
         nav a {
             color: white;
             margin: 0 20px;
             text-decoration: none;
             font-size: 1.2em;
-            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.3s ease;
         }
+
         nav a:hover {
-            color: #ffd700;
+            color: #f1c40f;
+            transform: scale(1.1);
         }
-        section {
-            padding: 100px 20px;
-            transition: all 0.5s;
+
+        nav i {
+            font-size: 1.5em;
         }
+
         .hero {
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: url('https://source.unsplash.com/1600x900/?technology,futuristic') center/cover;
+            background: url('https://source.unsplash.com/1600x900/?technology,futuristic') center/cover no-repeat;
             color: white;
             text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+            text-align: center;
+            padding: 0 20px;
         }
+
         .hero h1 {
-            font-size: 3em;
-            animation: fadeIn 2s ease-in-out;
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease-in-out;
         }
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        .section:nth-child(odd) {
-            background: rgba(34, 49, 63, 0.8);
+
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 20px;
         }
-        .section:nth-child(even) {
-            background: rgba(44, 62, 80, 0.8);
-        }
+
         .btn {
-            background: #ff4757;
+            background: #f1c40f;
             color: white;
-            padding: 15px 25px;
-            font-size: 1.2em;
+            padding: 15px 30px;
             text-decoration: none;
             border-radius: 5px;
-            transition: transform 0.3s, background 0.3s;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
         }
+
         .btn:hover {
+            background: #e67e22;
             transform: scale(1.1);
-            background: #ff9a00;
         }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .section:nth-child(odd) {
+            background: #2c2c2c;
+        }
+
+        .section:nth-child(even) {
+            background: #444;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #f1c40f;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 15px;
             padding: 20px;
         }
+
         .skill {
-            background: linear-gradient(45deg, #ff6b81, #ff4757, #ff9a00);
+            background: #34495e;
             color: white;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.3);
-        }
-        footer {
-            background: #1a1a1a;
             padding: 20px;
-            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            font-size: 1.2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease;
+            flex-direction: column;
+        }
+
+        .skill:hover {
+            transform: scale(1.05);
+            background: #16a085;
+        }
+
+        footer {
+            background: #333;
+            padding: 20px;
+            text-align: center;
+            font-size: 1em;
+        }
+
+        footer a {
+            color: #f1c40f;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header>
-        Yatharth Kelkar - Tech Enthusiast
+        <h1>Yatharth Kelkar</h1>
+        <p>Tech Enthusiast | Web Developer | Python Expert</p>
     </header>
     <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#resume">Resume</a>
-        <a href="#tech-analysis">Tech Analysis</a>
-        <a href="#contact">Contact</a>
+        <a href="#about"><i class="fas fa-user"></i> About</a>
+        <a href="#skills"><i class="fas fa-cogs"></i> Skills</a>
+        <a href="#resume"><i class="fas fa-file-alt"></i> Resume</a>
+        <a href="#tech-analysis"><i class="fas fa-laptop-code"></i> Tech Analysis</a>
+        <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
     </nav>
+
     <section class="hero">
         <h1>Welcome to My Portfolio</h1>
         <p>Innovative Web Developer | Python Expert | Linux Power User | Tech Trend Analyst</p>
         <a href="https://www.youtube.com/@YatharthKelkar" target="_blank" class="btn">Visit My YouTube</a>
     </section>
+
     <section id="about" class="section">
         <h2>About Me</h2>
-        <p>I'm a 13-year-old Web & App Developer with 2+ years of experience building full-stack applications and contributing to open source. Skilled in Linux, web technologies, and software development, I prioritize efficiency, scalability, and user-focused design while staying ahead of tech trends</p>
+        <p>I'm a 13-year-old Web & App Developer with 2+ years of experience building full-stack applications and contributing to open source. Skilled in Linux, web technologies, and software development, I prioritize efficiency, scalability, and user-focused design while staying ahead of tech trends.</p>
     </section>
+
     <section id="skills" class="section">
         <h2>My Skills</h2>
         <div class="skills-grid">
-            <div class="skill">HTML</div>
-            <div class="skill">CSS</div>
-            <div class="skill">Python</div>
-            <div class="skill">JavaScript (Learning)</div>
-            <div class="skill">Linux (Ubuntu, Arch, Mint, Fedora)</div>
+            <div class="skill"><i class="fab fa-html5"></i><br> HTML</div>
+            <div class="skill"><i class="fab fa-css3-alt"></i><br> CSS</div>
+            <div class="skill"><i class="fab fa-python"></i><br> Python</div>
+            <div class="skill"><i class="fab fa-js-square"></i><br> JavaScript (Learning)</div>
+            <div class="skill"><i class="fab fa-linux"></i><br> Linux</div>
         </div>
     </section>
+
     <section id="resume" class="section">
         <h2>My Resume</h2>
-        <p>Explore my experience, skills, and projects in detail. Download my resume to learn more about my journey in web and app development.</p><p> <a href="https://docs.google.com/document/d/1OhNe5Vi0A2_PSe7jAEUeFv7ZBMsCCMyq/edit?usp=sharing&ouid=112296873527594322013&rtpof=true&sd=true">Click Me</a></p>
+        <p>Explore my experience, skills, and projects in detail. Download my resume to learn more about my journey in web and app development.</p>
+        <p><a href="https://docs.google.com/document/d/1OhNe5Vi0A2_PSe7jAEUeFv7ZBMsCCMyq/edit?usp=sharing&ouid=112296873527594322013&rtpof=true&sd=true" target="_blank" class="btn">Download Resume</a></p>
     </section>
+
     <section id="tech-analysis" class="section">
         <h2>Tech Analysis</h2>
         <p>Keeping up with cutting-edge innovations in the tech world, from software updates to emerging trends in AI, web development, and open-source ecosystems.</p>
     </section>
+
     <section id="contact" class="section">
         <h2>Contact Me</h2>
         <p>Email: <a href="mailto:kelkaryatharth@gmail.com">kelkaryatharth@gmail.com</a></p>
         <p>Email: <a href="mailto:kelkaryatharth1@gmail.com">kelkaryatharth1@gmail.com</a></p>
     </section>
+
     <footer>
         <p>&copy; 2025 Yatharth Kelkar. All Rights Reserved.</p>
     </footer>
